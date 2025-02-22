@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "pc_rasterize" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://github.com/UM-RMRS/pc-rasterize/releases/download/v{{ version }}/pc_rasterize-{{ version }}-sdist.tar.gz
-  sha256: 699c8b2a7dd38defea68ed58709efde4e23dfed932be1bb9572fbae4f3b0bac3
+  sha256: 70ec70c3e364951f99963e325b46f9d72628fe099f1d55aeb9bb46c109884efe
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
